@@ -48,3 +48,26 @@ Demonstrar uma condição de corrida e como isso pode ser evitado usando um sem�
 | Com semáforo | 1 | 1.600.000 | 1.600.000 | 1,6750s |
 | Com semáforo | 2 | 1.600.000 | 1.600.000 | 1,6642s |
 | Com semáforo | 3 | 1.600.000 | 1.600.000 | 1,6636s |
+
+## Parte 2 (Gabriel)
+
+## Objetivo
+
+Demonstrar um deadlock entre duas threads que utilizam dois locks compartilhados e apresentar uma correção por meio de uma hierarquia global de aquisição de recursos.
+
+### Condições de Coffman
+
+
+Exclusão mútua: cada lock só pode ser utilizado por uma thread.
+
+Manter-e-esperar: cada thread mantém um lock enquanto espera pelo outro.
+
+Não preempção: os locks só são liberados pelas próprias threads.
+
+Espera circular: cada thread espera pelo lock que está com a outra.
+
+### Versão corrigida
+
+No arquivo parte 3/sem_deadlock.py, as duas threads adquirem os locks na mesma ordem: primeiro LOCK_A e depois LOCK_B.
+
+Essa solução quebra a condição de espera circular, evitando o deadlock.
