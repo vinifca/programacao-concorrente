@@ -71,3 +71,31 @@ Espera circular: cada thread espera pelo lock que está com a outra.
 No arquivo parte 3/sem_deadlock.py, as duas threads adquirem os locks na mesma ordem: primeiro LOCK_A e depois LOCK_B.
 
 Essa solução quebra a condição de espera circular, evitando o deadlock.
+
+### execução 
+#### com_deadlock.py
+
+
+Thread 1: tentando adquirir LOCK_A...
+Thread 1: adquiriu LOCK_A
+Thread 2: tentando adquirir LOCK_B...
+Thread 2: adquiriu LOCK_B
+Thread 1: tentando adquirir LOCK_B...
+Thread 2: tentando adquirir LOCK_A...
+
+[DEADLOCK DETECTADO] As threads ficaram bloqueadas esperando uma pela outra:
+  Thread ativa: MainThread (alive=True)
+  Thread ativa: Thread-2 (alive=True)
+
+#### sem_deadlock.py
+Thread 1: tentando adquirir LOCK_A...
+Thread 1: adquiriu LOCK_A
+Thread 2: tentando adquirir LOCK_A...
+Thread 1: tentando adquirir LOCK_B...
+Thread 1: adquiriu LOCK_B
+T1 concluiu
+Thread 2: adquiriu LOCK_A
+Thread 2: tentando adquirir LOCK_B...
+Thread 2: adquiriu LOCK_B
+T2 concluiu
+
