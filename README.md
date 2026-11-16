@@ -17,11 +17,10 @@ Demonstrar uma condição de corrida e como isso pode ser evitado usando um sem�
 
 - **Visibilidade e ordenação:** A sincronização garante que as threads acessem os valores atualizados, em java isso ocorre pela relação *happens-before* e em Python pelos mecanismos de sincronização do semáforo.
 
-
-Versão	      Teste	   Esperado	    Obtido	    Tempo
-Sem sync	    1	   1.600.000	528.388	    0,2696s
-Sem sync	    2	   1.600.000	554.788	    0,2562s
-Sem sync	    3	   1.600.000	856.935	    0,2646s
-Com semáforo	1	   1.600.000	1.600.000	1,6750s
-Com semáforo	2	   1.600.000	1.600.000	1,6642s
-Com semáforo	3	   1.600.000	1.600.000	1,6636s
+| Versão | Teste | Esperado | Obtido | Tempo |
+| Sem sync | 1 | 1.600.000 | 528.388 | 0,2696s |
+| Sem sync | 2 | 1.600.000 | 554.788 | 0,2562s |
+| Sem sync | 3 | 1.600.000 | 856.935 | 0,2646s |
+| Com semáforo | 1 | 1.600.000 | 1.600.000 | 1,6750s |
+| Com semáforo | 2 | 1.600.000 | 1.600.000 | 1,6642s |
+| Com semáforo | 3 | 1.600.000 | 1.600.000 | 1,6636s |
