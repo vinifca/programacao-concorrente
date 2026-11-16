@@ -1,7 +1,7 @@
 # programacao-concorrente
 Esse projeto explora três problemas centrais da programação concorrente: o Jantar dos Filósofos, condições de corrida controladas por semáforos e o tratamento de deadlock.
 
-Integrantes: Gabriel Tomé dos Santos, Pedro Pimentel Moura e Vinícius Felde Caetano Alves
+Integrantes: Gabriel Tomé dos Santos, Pedro Pimentel Moura e Vinícius Felde Caetano Alves  
 Linguagem: Python
 
 ## Parte 1 (Vinícius)
